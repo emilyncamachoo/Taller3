@@ -65,18 +65,18 @@ function draw() {
         // Calculate a y value according to noise, map to
 
         // Option #1: 2D Noise
-        let y = map(noise(xoff, yoff), 0, 1, 200, 300);
+        //let y = map(noise(xoff, yoff), 0, 1, 200, 300);
 
         // Option #2: 1D Noise
-        // let y = map(noise(xoff), 0, 1, 200,300);
+        let y = map(noise(xoff), 0, 1, 200,300);
 
         // Set the vertex
         vertex(x, y);
         // Increment x dimension for noise
-        xoff += 0.05;
+        xoff += 0.09;
     }
     // increment y dimension for noise
-    yoff += 0.01;
+    yoff += 0.05;
     vertex(width, height);
     vertex(0, height);
     endShape(CLOSE);
